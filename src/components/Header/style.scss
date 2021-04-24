@@ -1,0 +1,31 @@
+@import 'src/styles/vars';
+
+.header {
+  background-color: $color-main;
+  color: $color-light;
+  padding: $gutter;
+  text-align: center;
+
+  // .header-title { } // -> .header .header-title
+  &-title { // -> .header-title
+    font-size: 2em;
+    font-weight: 700;
+    margin: $gutter 0;
+    letter-spacing: 1px;
+  }
+
+  &-amount {
+    font-size: 1.3em;
+    margin: $gutter 0;
+  }
+}
+
+.form {
+  font-size: 1.2em;
+  &-input {
+    width: 40%;
+    height: 2rem;
+    margin-right: 1rem;
+    font-size: 1em;
+  }
+}

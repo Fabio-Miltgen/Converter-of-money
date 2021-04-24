@@ -1,0 +1,17 @@
+@import 'src/styles/vars';
+
+.amount {
+  padding: $gutter;
+  text-align: center;
+  color: $color-main;
+
+  &-value {
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  &-currency {
+    font-size: 1.3em;
+    margin-top: $gutter;
+  }
+}

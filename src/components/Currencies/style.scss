@@ -1,0 +1,36 @@
+@import 'src/styles/vars';
+
+.currencies {
+  height: 250px;
+  overflow-y: auto;
+  color: $color-main;
+
+  &-search {
+    font: inherit;
+    font-weight: 500;
+    padding: $gutter;
+    width: 100%;
+    border: none;
+
+    &::placeholder {
+      color: $color-main;
+    }
+  }
+
+  &-list { // -> .currencies-list
+    border-top: 1px solid $color-alt;
+
+    &-item { // -> .currencies-list-item
+      border-bottom: 1px solid $color-alt;
+      padding: $gutter;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color $slow;
+
+      &:hover {
+        background-color: $color-alt;
+        transition-duration: $fast;
+      }
+    }
+  }
+}

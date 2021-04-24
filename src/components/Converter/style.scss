@@ -1,0 +1,9 @@
+// un import scss s'écrit @import
+@import 'src/styles/vars';
+
+.converter {
+  width: 90%;
+  max-width: 300px;
+  background-color: $color-light;
+  margin: $gutter auto; // -> margin: 1.3rem auto;
+}
