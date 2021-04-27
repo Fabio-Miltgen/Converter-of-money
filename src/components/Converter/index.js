@@ -23,7 +23,6 @@ class Converter extends React.Component {
   };
 
   componentDidMount() {
-    console.log('Converter - componentDiMount');
     document.addEventListener('keyup', (event) => {
       if (event.code === 'Escape') {
         this.setState({
@@ -37,10 +36,6 @@ class Converter extends React.Component {
     });
   }
 
-  componentDidUpdate() {
-    console.log('Converter - componentDiUpdate');
-  }
-
   setBaseAmount = (event) => {
     // event.preventDefault();
     let valueSubmit = Number(event.target.value);
@@ -51,7 +46,6 @@ class Converter extends React.Component {
   }
 
   setCurrency = (event) => {
-    console.log(event.target.textContent);
     this.setState({
       currency: event.target.textContent,
     });
