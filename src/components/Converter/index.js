@@ -15,7 +15,7 @@ class Converter extends React.Component {
   // state initial
 
   state = {
-    open: true,
+    // open: true,
     baseAmount: 1,
     // rate: 1.09,
     currency: 'United States Dollar',
@@ -56,14 +56,14 @@ class Converter extends React.Component {
   // Or les fonctions fléchées ne définissent pas this
   // donc ici this fera rérérence à "là où a fonction est écrite" c'est à dire à l'instance de ma classe
 
-  toggleOpen = () => {
-    const { open } = this.state;
+  // toggleOpen = () => {
+  //   const { open } = this.state;
 
-    // écriture
-    this.setState({
-      open: !open,
-    });
-  }
+  //   // écriture
+  //   this.setState({
+  //     open: !open,
+  //   });
+  // }
 
   filterCurrencies = () => {
     const { search: searchValue } = this.state;
@@ -97,7 +97,7 @@ class Converter extends React.Component {
   render() {
     // lecture
     const {
-      open,
+      // open,
       currency,
       baseAmount,
       search,
@@ -108,19 +108,15 @@ class Converter extends React.Component {
       <div className="converter">
         <Header
           baseAmount={baseAmount}
-          toggle={this.toggleOpen}
           setBaseAmount={this.setBaseAmount}
-          open={open}
         />
         <main>
-          {open && (
-            <Currencies
-              changeCurrency={this.setCurrency}
-              currencies={filteredCurrencies}
-              setSearch={this.setSearch}
-              currentSearch={search}
-            />
-          )}
+          <Currencies
+            changeCurrency={this.setCurrency}
+            currencies={filteredCurrencies}
+            setSearch={this.setSearch}
+            currentSearch={search}
+          />
           <Amount convertedAmount={convertedAmount} currency={currency} />
         </main>
       </div>

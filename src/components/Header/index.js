@@ -6,16 +6,16 @@ import './style.scss';
 
 const Header = ({
   baseAmount,
-  toggle,
+  // toggle,
   setBaseAmount,
-  open,
+  // open,
 }) => (
   <header className="header">
     <h1 className="header-title">Convertisseur</h1>
     <div className="header-amount">
       <BaseAmount baseAmount={baseAmount} setBaseAmount={setBaseAmount} />
     </div>
-    <button
+    {/* <button
       // je place mon écouteur directement sur l'élement JSX
       // on met onNomDeLEvent en camelCase
       // on va retrouver onClick, onSubmit, onChange, ...
@@ -25,16 +25,17 @@ const Header = ({
       {/* condition ternaire :
         test ? valeurSiVrai : valeurSiFaux
       */}
-      {open ? 'Masquer' : 'Afficher' }
-    </button>
+      {/*{open ? 'Masquer' : 'Afficher' }
+    </button> */}
+
   </header>
 );
 
 Header.propTypes = {
   setBaseAmount: PropTypes.func.isRequired,
   baseAmount: PropTypes.number.isRequired,
-  toggle: PropTypes.func.isRequired,
-  open: PropTypes.bool.isRequired,
+  // toggle: PropTypes.func.isRequired,
+  // open: PropTypes.bool.isRequired,
 };
 
 export default Header;
